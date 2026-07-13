@@ -1,0 +1,58 @@
+Flask
+gunicorn
+requests
+aiohttp
+pytz
+psutil
+numpy
+pandas
+beautifulsoup4
+openpyxl
+PyPDF2
+Pillow
+opencv-python-headless
+selenium
+webdriver-manager
+openai
+langdetect
+wikipedia-api
+newsapi-python
+gTTS
+yt-dlp
+youtube_dl
+youtube-search
+ytmusicapi
+instagrapi
+python-telegram-bot==13.15
+line-bot-sdk
+discord.py
+PyNaCl
+wechatpy
+spotipy
+tidalapi
+pymongo
+elevenlabs
+azure-cognitiveservices-speech
+python-docx
+pyaudio
+pvporcupine
+prompt_toolkit
+pydub
+ffmpeg-python
+moviepy
+ratelimit
+firebase-admin
+scipy
+SpeechRecognition
+sounddevice
+simpleaudio
+
+# -----------------------------
+# Windows-only
+# -----------------------------
+
+keyboard; platform_system=="Windows"
+pynput; platform_system=="Windows"
+PyAutoGUI; platform_system=="Windows"
+pycaw; platform_system=="Windows"
+comtypes; platform_system=="Windows"

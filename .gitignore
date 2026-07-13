@@ -1,0 +1,8 @@
+**/__pycache__/
+config.json
+jazz.json
+*.log
+*.pem
+ Api/Media/Line/DB/
+ Api/Media/Line/Wallet/
+ Api/Media/Telegram/DB/

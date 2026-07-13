@@ -1,0 +1,20 @@
+This is the entire construct of the new Intelligent System ( IS ) that will be released as a Virtual OS.
+
+It includes Image, Voice, Speech, and Web Accessibility;
+A wide range of Third Party Services and APIs are appended to create a comprehensive UI for Users.
+There are many Libraries to Download.  I will provide the requirements.txt soon
+
+User-Centric Design
+Innovative Interaction
+
+You require to provide a config.json File
+Check settings.py to see what APIs you need
+
+API WRAPPER:
+  - Web
+  - Line
+  - Wechat
+  - Discord
+  - Telegram
+  - Instagram
+  - Terminal 

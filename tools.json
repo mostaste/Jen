@@ -1,0 +1,278 @@
+{
+    "tools": [
+        {
+            "type": "function",
+            "function": {
+                "name": "Weather",
+                "description": "Provide weather details based on a city",
+                "parameters": {
+                    "type": "object",
+                    "properties": {
+                        "location": {
+                            "type": "string",
+                            "description": "The city to get the weather for"
+                        }
+                    },
+                    "required": [
+                        "location"
+                    ]
+                }
+            }
+        },
+        {
+            "type": "function",
+            "function": {
+                "name": "Music",
+                "description": "Play music based on a song",
+                "parameters": {
+                    "type": "object",
+                    "properties": {
+                        "song": {
+                            "type": "string",
+                            "description": "The song to search music for"
+                        }
+                    },
+                    "required": [
+                        "song"
+                    ]
+                }
+            }
+        },
+        {
+            "type": "function",
+            "function": {
+                "name": "Youtube",
+                "description": "Play a video on YouTube based on a query",
+                "parameters": {
+                    "type": "object",
+                    "properties": {
+                        "video": {
+                            "type": "string",
+                            "description": "The search query for the YouTube video"
+                        }
+                    },
+                    "required": [
+                        "video"
+                    ]
+                }
+            }
+        },
+        {
+            "type": "function",
+            "function": {
+                "name": "Note",
+                "description": "Write a new reminder",
+                "parameters": {
+                    "type": "object",
+                    "properties": {
+                        "reminder": {
+                            "type": "string",
+                            "description": "The reminder note you want to add"
+                        }
+                    },
+                    "required": [
+                        "reminder"
+                    ]
+                }
+            }
+        },
+        {
+            "type": "function",
+            "function": {
+                "name": "Peek",
+                "description": "Read or Clear existing reminders",
+                "parameters": {
+                    "type": "object",
+                    "properties": {
+                        "command": {
+                            "type": "string",
+                            "description": "Return 'read' or 'clear'"
+                        }
+                    },
+                    "required": [
+                        "command"
+                    ]
+                }
+            }
+        },
+        {
+            "type": "function",
+            "function": {
+                "name": "Currency",
+                "description": "Converts an amount from one currency to another",
+                "parameters": {
+                    "type": "object",
+                    "properties": {
+                        "from": {
+                            "type": "string",
+                            "description": "The currency code to convert from (e.g., 'USD')"
+                        },
+                        "to": {
+                            "type": "string",
+                            "description": "The currency code to convert to (e.g., 'EUR')"
+                        },
+                        "amount": {
+                            "type": "number",
+                            "description": "The amount to be converted"
+                        }
+                    },
+                    "required": [
+                        "from_currency",
+                        "to_currency",
+                        "amount"
+                    ]
+                }
+            }
+        },
+        {
+            "type": "function",
+            "function": {
+                "name": "Crypto",
+                "description": "Converts an amount from one crypto to another",
+                "parameters": {
+                    "type": "object",
+                    "properties": {
+                        "from": {
+                            "type": "string",
+                            "description": "The crypto code to convert from (e.g., 'BTC')"
+                        },
+                        "to": {
+                            "type": "string",
+                            "description": "The crypto code to convert to (e.g., 'ETH')"
+                        },
+                        "amount": {
+                            "type": "number",
+                            "description": "The amount to be converted"
+                        }
+                    },
+                    "required": [
+                        "from_currency",
+                        "to_currency",
+                        "amount"
+                    ]
+                }
+            }
+        },
+        {
+            "type": "function",
+            "function": {
+                "name": "Time",
+                "description": "Convert time between two time zones",
+                "parameters": {
+                    "type": "object",
+                    "properties": {
+                        "from": {
+                            "type": "string",
+                            "description": "The originating time zone in TZ database format (e.g., 'Asia/Bangkok')"
+                        },
+                        "to": {
+                            "type": "string",
+                            "description": "The target time zone in TZ database format (e.g., 'Asia/Kolkata')"
+                        },
+                        "time": {
+                            "type": "string",
+                            "description": "The time to convert in format 'HH:MM AM/PM'"
+                        }
+                    },
+                    "required": [
+                        "from",
+                        "to",
+                        "time"
+                    ]
+                }
+            }
+        },
+        {
+            "type": "function",
+            "function": {
+                "name": "Draw",
+                "description": "Generate an image based on a text prompt",
+                "parameters": {
+                    "type": "object",
+                    "properties": {
+                        "prompt": {
+                            "type": "string",
+                            "description": "The text prompt to generate an image for"
+                        }
+                    },
+                    "required": [
+                        "prompt"
+                    ]
+                }
+            }
+        },
+        {
+            "type": "function",
+            "function": {
+                "name": "Maps",
+                "description": "Generate a Google Maps URL from natural language. Supports directions ('A -> B [driving|walking|bicycling|transit]' or 'from A to B [mode]') and search ('<keyword> near/nearby <place>' or a plain place). Returns a single ready-to-open URL.",
+                "parameters": {
+                    "type": "object",
+                    "properties": {
+                        "text": {
+                        "type": "string",
+                        "description": "User input, e.g. 'from Bang Na to ICONSIAM transit', 'Thai food near Ekkamai', 'pizza nearby Thonglor', or 'ICONSIAM'."
+                        }
+                    },
+                    "required": [
+                        "text"
+                    ]
+                }
+            }
+        },
+        {
+            "type": "function",
+            "function": {
+                "name": "Audio",
+                "description": "Turn ON/OFF audio listening features (voice message transcription). Use this when the user asks to enable/disable audio detection or listening.",
+                "parameters": {
+                    "type": "object",
+                    "properties": {
+                        "state": {
+                            "type": "string",
+                            "enum": ["on", "off", "toggle", "status"],
+                            "description": "Set or toggle audio listening. Use 'status' to query current state."
+                        }
+                    },
+                    "required": ["state"]
+                }
+            }
+        },
+        {
+            "type": "function",
+            "function": {
+                "name": "Speak",
+                "description": "Turn ON/OFF voice replies (text-to-speech). Use this when the user asks you to speak or stop speaking.",
+                "parameters": {
+                    "type": "object",
+                    "properties": {
+                        "state": {
+                            "type": "string",
+                            "enum": ["on", "off", "toggle", "status"],
+                            "description": "Set or toggle speaking (TTS). Use 'status' to query current state."
+                        }
+                    },
+                    "required": ["state"]
+                }
+            }
+        },
+        {
+            "type": "function",
+            "function": {
+                "name": "Vision",
+                "description": "Turn ON/OFF image understanding features (describe images/videos). Use this when the user asks to enable/disable image description.",
+                "parameters": {
+                    "type": "object",
+                    "properties": {
+                        "state": {
+                            "type": "string",
+                            "enum": ["on", "off", "toggle", "status"],
+                            "description": "Set or toggle vision features. Use 'status' to query current state."
+                        }
+                    },
+                    "required": ["state"]
+                }
+            }
+        }
+    ]
+}
